@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express();
 const cors = require('cors');
+app.use(express.static('dist')); // middleware to serve static files from the 'dist' directory
 
 app.use(cors()); // middleware to enable CORS
-
 app.use(express.json()); // middleware to parse JSON bodies
 
 let notes = [
